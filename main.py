@@ -39,7 +39,7 @@ def is_valid_url(url):
         logging.error(f"Invalid URL provided: {url}")
         return False
 
-def generate_qr_code(data, path, fill_color='red', back_color='white'):
+def generate_qr_code(data, path, fill_color='purple', back_color='white'):
     if not is_valid_url(data):
         return  # Exit the function if the URL is not valid
 
@@ -59,7 +59,7 @@ def generate_qr_code(data, path, fill_color='red', back_color='white'):
 def main():
     # Set up command-line argument parsing
     parser = argparse.ArgumentParser(description='Generate a QR code.')
-    parser.add_argument('--url', help='The URL to encode in the QR code', default='https://github.com/kaw393939')
+    parser.add_argument('--url', help='The URL to encode in the QR code', default='https://github.com/nikkiwizard')
     args = parser.parse_args()
 
     # Initial logging setup
